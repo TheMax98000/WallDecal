@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.walldecal.gtitech" version="1.0.0.1" android-versionCode="1000001" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>Wall Decal</name>
+	<description>Wall Decal App</description>
+	<author>GT-ITECH</author>
+
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+
+	<icon src="www/icons/icon-512.png" width="512" height="512" density="xxxhdpi" />
+	<icon src="www/icons/icon-256.png" width="256" height="256" />
+	<icon src="www/icons/icon-128.png" width="128" height="128" density="xhdpi" />
+	<icon src="www/icons/icon-64.png" width="64" height="64" density="mdpi" />
+	<icon src="www/icons/icon-32.png" width="32" height="32" />
+	<icon src="www/icons/icon-16.png" width="16" height="16" />
+
+	<plugin name="cordova-plugin-inappbrowser" />
+	<plugin name="cordova-plugin-whitelist" />
+	<plugin name="cordova-plugin-camera" />
+	<plugin name="cordova-plugin-statusbar" />
+	<plugin name="cordova-custom-config" />
+	<plugin name="cordova-plugin-wkwebview-engine" />
+	<plugin name="cordova-plugin-file" />
+	<preference name="orientation" value="portrait" />
+	<preference name="fullscreen" value="true" />
+	<preference name="DisallowOverscroll" value="true" />
+	<access origin="*" />
+
+	<engine name="ios" />
+
+	<platform name="ios">
+		<feature name="CDVWKWebViewEngine">
+			<param name="ios-package" value="CDVWKWebViewEngine" />
+		</feature>
+		<preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+		<preference name="AllowInlineMediaPlayback" value="true" />
+		<preference name="deployment-target" value="9.0" />
+		
+		<config-file parent="UIStatusBarHidden" platform="ios" target="*-Info.plist"><true/></config-file>
+		<config-file parent="UIViewControllerBasedStatusBarAppearance" platform="ios" target="*-Info.plist"><false/></config-file>
+	</platform>
+
+</widget>
